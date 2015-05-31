@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{2423F571-A9F7-8CF3-7717-87DC604EDD99}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_5_0_1;UNITY_5_0;UNITY_5;ENABLE_LICENSE_RENAME;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_NEW_HIERARCHY;ENABLE_PHYSICS;ENABLE_PHYSICS_PHYSX3;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_AUDIOMIXER_SUSPEND;ENABLE_NONPRO;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;CROSS_PLATFORM_INPUT;MOBILE_INPUT</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Unity5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Unity5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Detonator Explosion Framework\Sample Supporting Emitters\DetonatorSprayHelper.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\Detonator.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorBurstEmitter.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorCloudRing.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorComponent.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorFireball.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorForce.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorGlow.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorHeatwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorLight.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorShockwave.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSmoke.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSound.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSparks.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\DetonatorTest.cs" />
+     <Compile Include="Assets\Detonator Explosion Framework\TestScene\TouchToMouse.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\CameraSwitch.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\LevelReset.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\SampleAssets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\scripts\BlackBone.cs" />
+     <Compile Include="Assets\scripts\Bone.cs" />
+     <Compile Include="Assets\scripts\Boss.cs" />
+     <Compile Include="Assets\scripts\Bread.cs" />
+     <Compile Include="Assets\scripts\Bul.cs" />
+     <Compile Include="Assets\scripts\Damage.cs" />
+     <Compile Include="Assets\scripts\GameManager.cs" />
+     <Compile Include="Assets\scripts\GameOver.cs" />
+     <Compile Include="Assets\scripts\Haikei.cs" />
+     <Compile Include="Assets\scripts\HighScoreGUI.cs" />
+     <Compile Include="Assets\scripts\Hpbar.cs" />
+     <Compile Include="Assets\scripts\Niku.cs" />
+     <Compile Include="Assets\scripts\Player.cs" />
+     <Compile Include="Assets\scripts\Score.cs" />
+     <Compile Include="Assets\scripts\ScoreGUI.cs" />
+     <Compile Include="Assets\scripts\Spawner.cs" />
+     <Compile Include="Assets\scripts\StartGame.cs" />
+     <Compile Include="Assets\scripts\StartWall.cs" />
+     <Compile Include="Assets\scripts\boss_ai.cs" />
+     <Compile Include="Assets\scripts\enemy_ai.cs" />
+     <None Include="Assets\SampleAssets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Detonator Explosion Framework\Resources\Detonator\Textures\HeatDistort.shader" />
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Unity5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>C:/Unity5/Editor/Data/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
