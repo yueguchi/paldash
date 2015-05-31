@@ -43,10 +43,13 @@ public class Damage : MonoBehaviour {
 		// enemyに当たったら50のダメージをパルが受ける
 		if (!onDamage && col.gameObject.tag == "enemy" || col.gameObject.tag == "black_bone") {
 			Destroy(col.gameObject);
-			hpbar.gameObject.SendMessage("onDamage", 50);
+			hpbar.gameObject.SendMessage("onDamage", 30);
 			OnDamageEffect();
 		}
 		// 回復アイテム
+		if (col.gameObject.tag == "item") {
+			hpbar.gameObject.SendMessage("onDamage", -5);
+		}
 		if (col.gameObject.tag == "niku") {
 			hpbar.gameObject.SendMessage("onDamage", -30);
 		}

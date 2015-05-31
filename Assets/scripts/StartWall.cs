@@ -15,7 +15,8 @@ public class StartWall : MonoBehaviour {
 
 	// BOX個ライダーの衝突開始コールバック
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.tag == "item" 
+		if (col.gameObject.tag == "item"
+		    || col.gameObject.tag == "niku"
 		    || col.gameObject.tag == "enemy" 
 		    || col.gameObject.tag == "bone" 
 		    || col.gameObject.tag == "black_bone") {
