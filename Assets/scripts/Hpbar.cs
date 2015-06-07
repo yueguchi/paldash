@@ -3,14 +3,14 @@ using System.Collections;
 
 public class Hpbar : MonoBehaviour {
 
+	public static float sceneHp = 250;
+
 
 	// Use this for initialization
 	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		Rect hpRect = GetComponent<GUITexture> ().pixelInset;
+		hpRect.width = sceneHp;
+		GetComponent<GUITexture>().pixelInset = hpRect;
 	}
 
 	void onDamage(int damage) {
@@ -31,5 +31,14 @@ public class Hpbar : MonoBehaviour {
 			Application.LoadLevel("gameover");
 		}
 		GetComponent<GUITexture>().pixelInset = hpRect;
+	}
+
+	void OnDestroy() {
+		if (Application.loadedLevelName == "main" || Application.loadedLevelName == "boss") {
+			Rect hpRect = GetComponent<GUITexture> ().pixelInset;
+			sceneHp = hpRect.width;
+		} else {
+			sceneHp = 250;
+		}
 	}
 }

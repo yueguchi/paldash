@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour {
 		if (mTime >= intervalTime) {
 			Vector3 randomPos = Vector3.one;
 			randomPos.x = 9.5f;//固定
-			randomPos.y = Random.Range (0, 8);
+			randomPos.y = Random.Range (1, 8);
 			GameObject obj = Instantiate (prefab, randomPos, transform.rotation) as GameObject;
 			obj.GetComponent<Rigidbody2D>().velocity = velocity;
 			mTime = 0f;

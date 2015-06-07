@@ -18,7 +18,8 @@ public class StartWall : MonoBehaviour {
 		if (col.gameObject.tag == "item"
 		    || col.gameObject.tag == "niku"
 		    || col.gameObject.tag == "enemy" 
-		    || col.gameObject.tag == "bone" 
+		    || col.gameObject.tag == "bone"
+		    || col.gameObject.tag == "gomi"
 		    || col.gameObject.tag == "black_bone") {
 			Destroy(col.gameObject);
 		}

@@ -12,6 +12,13 @@ public class boss_ai : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		if (CountDown._textCountdown.text != "") {
+			return;
+		}
+
+		if (Boss.hp <= 0) {
+			return;
+		}
 		
 		//アイドル状態
 		if (isIdle) {

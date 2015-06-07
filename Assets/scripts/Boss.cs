@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Boss : MonoBehaviour {
 
-	public int hp = 1000;
+	public static int hp = 1000;
 	private bool onDamage = false;
 	public GameObject explosion;
 	public GameObject ex_sounds;
@@ -12,6 +12,7 @@ public class Boss : MonoBehaviour {
 	private float deadTimer = 5.0f;
 
 	void Start() {
+		hp = 1000;
 		if (Score.instance.score <= 0) {
 			int score = PlayerPrefs.GetInt("nowScore");
 			Score.instance.Add (score);

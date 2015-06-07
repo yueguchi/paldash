@@ -15,4 +15,12 @@ public class GameManager : MonoBehaviour {
 	void Update () {
 
 	}
+
+	public void StopTemp() {
+		if (Time.timeScale == 0) {
+			Time.timeScale = 1;
+		} else {
+			Time.timeScale = 0;
+		}
+	}
 }

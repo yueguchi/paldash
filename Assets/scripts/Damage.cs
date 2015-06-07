@@ -40,27 +40,35 @@ public class Damage : MonoBehaviour {
 			return;
 		}
 
-		// enemyに当たったら50のダメージをパルが受ける
-		if (!onDamage && col.gameObject.tag == "enemy" || col.gameObject.tag == "black_bone") {
+		// enemyに当たったらダメージをパルが受ける
+		if (!onDamage && col.gameObject.tag == "enemy") {
 			Destroy(col.gameObject);
-			hpbar.gameObject.SendMessage("onDamage", 30);
+			hpbar.gameObject.SendMessage("onDamage", 20);
 			OnDamageEffect();
+			return;
 		}
+
+		// 骨攻撃はもっとくらう
+		if (!onDamage && col.gameObject.tag == "black_bone") {
+			Destroy(col.gameObject);
+			hpbar.gameObject.SendMessage("onDamage", 40);
+			OnDamageEffect();
+			return;
+		}
+
 		// 回復アイテム
 		if (col.gameObject.tag == "item") {
-			hpbar.gameObject.SendMessage("onDamage", -5);
+			hpbar.gameObject.SendMessage("onDamage", -2);
+			return;
 		}
 		if (col.gameObject.tag == "niku") {
 			hpbar.gameObject.SendMessage("onDamage", -30);
+			return;
 		}
 	}
 
 	void OnDamageEffect() {
 		onDamage = true;
-		// Playerを後ろに飛ばす
-//		float s = 100f * Time.deltaTime;
-//		transform.Translate (Vector3.up * s);
-//		transform.Translate (Vector3.left * s);
 		StartCoroutine ("WaitForIt");
 	}
 

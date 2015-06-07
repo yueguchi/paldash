@@ -35,6 +35,9 @@ public class Player : MonoBehaviour {
 	public AudioClip getNikuSE;
 	public AudioClip getItemSE;
 
+	// 横向きのベクトル
+//	float h = 0f;
+
 
 	// 初回コール
 	void Start () {
@@ -46,6 +49,23 @@ public class Player : MonoBehaviour {
 	
 	// 1秒間に画面が描画されるたびにコールされる
 	void Update () {
+
+/*		if (Input.GetAxis ("Horizontal") > 0) {
+			h = 0.2f;
+		} else if (Input.GetAxis ("Horizontal") < 0) {
+			h = -0.2f;
+		} else {
+			h = 0f;
+		}
+		if((h > 0) || (h < 0)) {
+			transform.position = new Vector2(transform.position.x + h, transform.position.y);
+		}
+*/
+
+
+		if (Application.loadedLevelName == "boss" && CountDown._textCountdown.text != "") {
+			return;
+		}
 		if (jumpCount < maxJumpCount && (Input.GetButtonDown("Jump") || CrossPlatformInputManager.GetButtonDown("Jump"))) {
 			isJump = true;
 		}
@@ -84,6 +104,11 @@ public class Player : MonoBehaviour {
 			transform.position = new Vector2(startX, transform.position.y);
 			Destroy(col.gameObject);
 			Score.instance.Add();
+		}
+		// ゴミをとったら-10点
+		if (col.gameObject.tag == "gomi") {
+			Destroy(col.gameObject);
+			Score.instance.Add(-10);
 		}
 	}
 
