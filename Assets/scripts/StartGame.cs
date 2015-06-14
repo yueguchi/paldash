@@ -21,4 +21,11 @@ public class StartGame : MonoBehaviour {
 	public void endGame() {
 		Application.Quit ();
 	}
+
+	public void sendLine() {
+		int score = PlayerPrefs.GetInt ("HIGH_SCORE");
+		string scoreAddZero = score.ToString("000");
+		string highScore = "【ぱるだっしゅ】HIGH: " + scoreAddZero + "点を叩き出しました!!";
+		Application.OpenURL("http://line.naver.jp/R/msg/text/?" + WWW.EscapeURL(highScore, System.Text.Encoding.UTF8));
+	}
 }
