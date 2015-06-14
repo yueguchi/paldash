@@ -31,41 +31,23 @@ public class Player : MonoBehaviour {
 	public static bool isBigPalFlg = false;
 	// 音楽系
 	private AudioSource audioSource;
-	//public AudioClip audioClip;
 	public AudioClip getNikuSE;
 	public AudioClip getItemSE;
-
-	// 横向きのベクトル
-//	float h = 0f;
-
 
 	// 初回コール
 	void Start () {
 		rigid = GetComponent<Rigidbody2D> ();
 		this.startX = transform.position.x;
 		audioSource = GetComponent<AudioSource> ();
-		//audioSource.clip = audioClip; // 初回再生音楽
 	}
 	
 	// 1秒間に画面が描画されるたびにコールされる
 	void Update () {
 
-/*		if (Input.GetAxis ("Horizontal") > 0) {
-			h = 0.2f;
-		} else if (Input.GetAxis ("Horizontal") < 0) {
-			h = -0.2f;
-		} else {
-			h = 0f;
-		}
-		if((h > 0) || (h < 0)) {
-			transform.position = new Vector2(transform.position.x + h, transform.position.y);
-		}
-*/
-
-
-		if (Application.loadedLevelName == "boss" && CountDown._textCountdown.text != "") {
+		if (Application.loadedLevelName.Contains("boss") && CountDown._textCountdown.text != "") {
 			return;
 		}
+
 		if (jumpCount < maxJumpCount && (Input.GetButtonDown("Jump") || CrossPlatformInputManager.GetButtonDown("Jump"))) {
 			isJump = true;
 		}

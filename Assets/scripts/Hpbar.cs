@@ -34,7 +34,7 @@ public class Hpbar : MonoBehaviour {
 	}
 
 	void OnDestroy() {
-		if (Application.loadedLevelName == "main" || Application.loadedLevelName == "boss") {
+		if (Application.loadedLevelName == "main" || Application.loadedLevelName.Contains("boss")) {
 			Rect hpRect = GetComponent<GUITexture> ().pixelInset;
 			sceneHp = hpRect.width;
 		} else {

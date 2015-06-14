@@ -26,8 +26,8 @@ public class Bul : MonoBehaviour {
 			Destroy(col.gameObject);
 			hp -= 10;
 			if (hp <= 0) {
-				Instantiate(explosion, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
-				Instantiate(ex_sounds, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
+				//Instantiate(explosion, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
+				//Instantiate(ex_sounds, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
 				Destroy(gameObject);
 				Score.instance.Add();
 			}

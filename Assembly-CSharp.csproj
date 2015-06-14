@@ -79,6 +79,8 @@
      <Compile Include="Assets\scripts\BlackBone.cs" />
      <Compile Include="Assets\scripts\Bone.cs" />
      <Compile Include="Assets\scripts\Boss.cs" />
+     <Compile Include="Assets\scripts\Boss_dobel_ai.cs" />
+     <Compile Include="Assets\scripts\Boss_poodle_ai.cs" />
      <Compile Include="Assets\scripts\Bread.cs" />
      <Compile Include="Assets\scripts\Bul.cs" />
      <Compile Include="Assets\scripts\CountDown.cs" />

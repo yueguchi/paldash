@@ -40,6 +40,7 @@ public class boss_ai : MonoBehaviour {
 		if (attackCount == 1) {
 
 			GameObject fire = Instantiate(firePrefab, new Vector3(transform.position.x -3, Random.Range (0, 2), 1), Quaternion.identity) as GameObject;
+
 			// 攻撃オブジェクトのタグを変える
 			fire.gameObject.tag = "black_bone";
 			attackCount = 0;

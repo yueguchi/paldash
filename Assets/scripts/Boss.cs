@@ -39,9 +39,9 @@ public class Boss : MonoBehaviour {
 		if (col.gameObject.tag == "bone" && onDamage == false) {
 			hp -= 10;
 			if (hp <= 0) {
-				Instantiate(ex_sounds, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
-				Instantiate(ex_mush, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
-				Instantiate(explosion, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
+				//Instantiate(ex_sounds, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
+				//Instantiate(ex_mush, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
+				//Instantiate(explosion, new Vector3 (transform.position.x, transform.position.y, 1), Quaternion.identity);
 				Destroy(col.gameObject);
 				transform.localScale = new Vector2(0f, 0f);
 				StartCoroutine(WaitFotNextStage());
